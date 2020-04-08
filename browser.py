@@ -1,4 +1,4 @@
-from pyvirtualdisplay import Display
+#from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 import bs4
