@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 import bs4
 from constants import *
+import os
 
 
 class website:
