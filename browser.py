@@ -13,13 +13,16 @@ class website:
         #self.display.start()
         chrome_options = webdriver.ChromeOptions()
         chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-        chrome_options.add_argument("--enable-infobars")
-        chrome_options.add_argument("start-maximized")
-        chrome_options.add_argument("--enable-extensions")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--no-sandbox")
+        # chrome_options.add_argument("--enable-infobars")
+        # chrome_options.add_argument("start-maximized")
+        # chrome_options.add_argument("--enable-extensions")
         # Pass the argument 1 to allow and 2 to block
-        chrome_options.add_experimental_option("prefs", {
-            "profile.default_content_setting_values.notifications": 1
-        })
+        # chrome_options.add_experimental_option("prefs", {
+        #     "profile.default_content_setting_values.notifications": 1
+        # })
         #self.browser = webdriver.Chrome(chrome_options=chrome_options)
         self.browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
